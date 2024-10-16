@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado SENAI - Produtos</title>
+    <link rel="stylesheet" href="/static/css/produtos.css">
+</head>
+<body>
+    <div class="header">
+        <!-- Logo com link -->
+        <a href="/" class="logo-link">
+            <img src="{{ url_for('static', filename='img/marca.png') }}" alt="Logo do Mercado SENAI">
+        </a>
+        <!-- Container para a centralização do título -->
+        <div class="header-title">
+            <h1>MERCADO SENAI</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Container para links, se houver -->
+        <div class="title-links">
+            <div class="link-left">
+                <h2><a href="/admin">PEDIDOS</a></h2>
+            </div>
+            <div class="link-right">
+                <h2><a href="/produtos">PRODUTOS</a></h2>
+            </div>
+        </div>
+
+        <!-- Cards dos produtos -->
+        <div class="product-cards">
+            {% for produto in produtos %}
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{ url_for('static', filename='img/' ~ produto[2]) }}" alt="{{ produto[1] }}">
+                </div>
+                <div class="card-footer">
+                    <h2>{{ produto[1] }}</h2>
+                    <p>Quantidade em estoque: {{ produto[3] }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

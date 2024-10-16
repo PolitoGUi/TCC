@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado SENAI</title>
+    <link rel="stylesheet" href="/static/css/compras.css">
+</head>
+<body>
+    <div class="header">
+        <!-- Logo com link -->
+        <a href="/" class="logo-link">
+            <img src="{{ url_for('static', filename='img/marca.png') }}" alt="Logo do Mercado SENAI" class="logo">
+        </a>
+        <!-- Container para a centralização do título -->
+        <div class="header-title">
+            <h1>MERCADO SENAI</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-links">
+            <div class="link-left">
+                <h2><a href="/compras">LOJA</a></h2>
+            </div>
+            <div class="link-right">
+                <h2><a href="/carrinho">CARRINHO</a></h2>
+            </div>
+        </div>
+
+        <div class="products-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{ url_for('static', filename='img/bombom.jpeg') }}" alt="Bombom">
+                </div>
+                <div class="card-footer">
+                    <form action="/adicionar_ao_carrinho" method="post">
+                        <input type="hidden" name="nome_produto" value="Bombom">
+                        <input type="hidden" name="preco" value="10.00">
+                        <button type="submit" class="button">Adicionar ao Carrinho</button>
+                    </form>
+                    <form action="/compra_realizada" method="post">
+                        <input type="hidden" name="product_name" value="Bombom">
+                        <input type="hidden" name="product_price" value="10.00">
+                        <input type="hidden" name="quantidade" value="1">
+                        <button type="submit" class="button">Comprar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{ url_for('static', filename='img/leite.jpeg') }}" alt="Leite">
+                </div>
+                <div class="card-footer">
+                    <form action="/adicionar_ao_carrinho" method="post">
+                        <input type="hidden" name="nome_produto" value="Leite">
+                        <input type="hidden" name="preco" value="5.70">
+                        <button type="submit" class="button">Adicionar ao Carrinho</button>
+                    </form>
+                    <form action="/compra_realizada" method="post">
+                        <input type="hidden" name="product_name" value="Leite">
+                        <input type="hidden" name="product_price" value="5.70">
+                        <input type="hidden" name="quantidade" value="1">
+                        <button type="submit" class="button">Comprar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{ url_for('static', filename='img/cafe.jpeg') }}" alt="Café">
+                </div>
+                <div class="card-footer">
+                    <form action="/adicionar_ao_carrinho" method="post">
+                        <input type="hidden" name="nome_produto" value="Café">
+                        <input type="hidden" name="preco" value="22.30">
+                        <button type="submit" class="button">Adicionar ao Carrinho</button>
+                    </form>
+                    <form action="/compra_realizada" method="post">
+                        <input type="hidden" name="product_name" value="Café">
+                        <input type="hidden" name="product_price" value="22.30">
+                        <input type="hidden" name="quantidade" value="1">
+                        <button type="submit" class="button">Comprar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{ url_for('static', filename='img/nescau.jpeg') }}" alt="Nescau">
+                </div>
+                <div class="card-footer">
+                    <form action="/adicionar_ao_carrinho" method="post">
+                        <input type="hidden" name="nome_produto" value="Nescau">
+                        <input type="hidden" name="preco" value="10.00">
+                        <button type="submit" class="button">Adicionar ao Carrinho</button>
+                    </form>
+                    <form action="/compra_realizada" method="post">
+                        <input type="hidden" name="product_name" value="Nescau">
+                        <input type="hidden" name="product_price" value="10.00">
+                        <input type="hidden" name="quantidade" value="1">
+                        <button type="submit" class="button">Comprar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{ url_for('static', filename='img/farinha.jpeg') }}" alt="Farinha">
+                </div>
+                <div class="card-footer">
+                    <form action="/adicionar_ao_carrinho" method="post">
+                        <input type="hidden" name="nome_produto" value="Farinha">
+                        <input type="hidden" name="preco" value="7.40">
+                        <button type="submit" class="button">Adicionar ao Carrinho</button>
+                    </form>
+                    <form action="/compra_realizada" method="post">
+                        <input type="hidden" name="product_name" value="Farinha">
+                        <input type="hidden" name="product_price" value="7.40">
+                        <input type="hidden" name="quantidade" value="1">
+                        <button type="submit" class="button">Comprar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

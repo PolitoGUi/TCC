@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado SENAI - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/adm.css') }}">
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="logo-link">
+            <img src="{{ url_for('static', filename='img/marca.png') }}" alt="Logo do Mercado SENAI">
+        </a>
+        <div class="header-title">
+            <h1>MERCADO SENAI</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-links">
+            <div class="link-left">
+                <h2><a href="/admin">PEDIDOS</a></h2>
+            </div>
+            <div class="link-right">
+                <h2><a href="/produtos">PRODUTOS</a></h2>
+            </div>
+        </div>
+
+        <!-- Exibindo pedidos agrupados por pedido_grupo -->
+        {% for grupo in pedidos %}
+            <h3>Cliente: {{ grupo.nome }} - Hora: {{ grupo.hora }}</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in grupo.itens %}
+                        <tr>
+                            <td>{{ item.nome_produto }}</td>
+                            <td>R$ {{ item.preco }}</td>
+                            <td>{{ item.quantidade }}</td>
+                            <td>R$ {{ item.preco | float * item.quantidade | float }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado SENAI</title>
+    <link rel="stylesheet" href="/static/css/login_cliente.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- Adiciona o link para redirecionar ao clicar na logo -->
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/marca.png') }}" alt="Logo do Mercado SENAI">
+            </a>
+        </div>
+        <div class="login-form">
+            <h1>Mercado SENAI</h1>
+            <!-- Mensagens flash -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                        <li style="color: red;">{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <form action="/login_cliente" method="post">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Ainda não possui conta? <a href="/cd">Clique aqui</a> para se cadastrar.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+.header {
+  background-color: #2272a4; /* Azul para Loja */
+  width: 100%;
+  padding: 20px;
+  color: white;
+  display: flex; /* Usa flexbox para alinhar logo e título */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  position: relative;
+}
+
+.logo-link {
+  position: absolute;
+  left: 20px; /* Alinha a logo ao canto esquerdo */
+}
+
+.logo {
+  height: 120px; /* Ajuste a altura da logo conforme necessário */
+  width: auto;
+}
+
+.header-title h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+  flex: 1; /* Faz o título ocupar o espaço restante */
+}
+/* Estilo geral do corpo */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5DC; /* Cor de fundo clara para a página */
+}
+
+/* Estilo do cabeçalho */
+.header {
+  background-color: #2272a4; /* Vermelho intenso do cabeçalho */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo-link {
+  display: block;
+}
+
+.logo-link img {
+  max-width: 120px; /* Ajuste o tamanho da logo conforme necessário */
+  height: auto;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 32px; /* Ajuste o tamanho da fonte conforme necessário */
+  color: white;
+}
+
+/* Estilo para o container de produtos */
+.container {
+  padding: 20px;
+}
+
+/* Estilo dos links de navegação */
+.title-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title-links h2 a {
+  text-decoration: none;
+  color: #2272a4; /* Cor dos links */
+  font-weight: bold;
+}
+
+/* Estilo dos cards */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(20% - 20px); /* Ajuste a largura dos cards conforme necessário */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header img {
+  width: 100%; /* Ajuste a largura da imagem do card */
+  height: auto; /* Mantenha a proporção da imagem */
+}
+
+.card-footer {
+  padding: 10px;
+  text-align: center;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #45a049;
+}

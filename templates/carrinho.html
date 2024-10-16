@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="/static/css/carrinho.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="logo-link">
+            <img src="{{ url_for('static', filename='img/marca.png') }}" alt="Logo do Mercado SENAI" class="logo">
+        </a>
+        <div class="header-title">
+            <h1>CARRINHO DE COMPRAS</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-links">
+            <div class="link-left">
+                <h2><a href="/compras">LOJA</a></h2>
+            </div>
+            <div class="link-right">
+                <h2><a href="/carrinho">CARRINHO</a></h2>
+            </div>
+        </div>
+
+        <div class="cart-container">
+            <h2>Itens no Carrinho</h2>
+            <!-- Formulário para Finalizar Compra -->
+            <form action="/finalizar_compra" method="post">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if cart_items %}
+                            {% for item in cart_items %}
+                            <tr>
+                                <td>{{ item[1] }}</td>
+                                <td>R$ {{ item[2] }}</td>
+                                <td>{{ item[3] }}</td>
+                                <td>
+                                    <!-- Formulário separado para Remover do Carrinho -->
+                                    <form action="/remover_do_carrinho" method="POST" style="display:inline;">
+                                        <input type="hidden" name="produto_id" value="{{ item[0] }}">
+                                        <button type="submit" class="remove-button">Remover</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td colspan="4" class="empty-cart-message">Seu carrinho está vazio.</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+                <div class="cart-footer">
+                    <p>Total: R$ {{ total }}</p>
+                    <button type="submit" class="checkout-button">Finalizar Compra</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

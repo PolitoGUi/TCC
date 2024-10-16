@@ -1,0 +1,180 @@
+/* Estilo geral do corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F5F5DC; /* Cor de fundo semelhante ao da imagem */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo do cabeçalho */
+.header {
+  background-color: #A52A2A; /* Vermelho intenso do cabeçalho */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo para o contêiner da tabela */
+.container {
+  padding: 20px;
+  text-align: left;
+}
+
+/* Estilo para o contêiner que mantém o título e o botão lado a lado */
+.title-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título da seção de pedidos */
+h2 {
+  margin: 0;
+  font-weight: bold;
+  background-color: #A52A2A; /* Cor de fundo marrom da seção de pedidos */
+  color: white;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+/* Estilo da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #FAFAD2; /* Cor de fundo da tabela */
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Cor de fundo do cabeçalho da tabela */
+th {
+  background-color: #DCDCDC; /* Cinza claro */
+}
+
+/* Estilo do botão */
+.button {
+  background-color: #F08080; /* Cor do botão semelhante ao rosa salmão */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Estilo do botão ao passar o mouse */
+.button:hover {
+  background-color: #DC143C; /* Vermelho escuro ao passar o mouse */
+}
+
+/* Estilo para o link de redirecionamento "PEDIDOS" */
+.container h2 a {
+  color: #ffffff; /* Define a cor inicial do link */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-weight: bold; /* Torna o texto do link negrito */
+}
+
+/* Adicione esse código no seu arquivo adm.css */
+
+.title-links {
+  display: flex;
+  justify-content: space-between; /* Distribui os itens de modo que fiquem nos extremos */
+}
+
+.link-left, .link-right {
+  flex: 1; /* Garante que ambos os links ocupem a mesma quantidade de espaço */
+}
+
+.link-left {
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.link-right {
+  text-align: right; /* Alinha o texto à direita */
+}
+
+.table {
+  width: 100%; /* Garante que a tabela ocupe toda a largura disponível */
+  border-collapse: collapse; /* Remove os espaços entre as células da tabela */
+}
+
+table, th, td {
+  border: 1px solid black; /* Adiciona borda preta às tabelas e células */
+}
+
+/* Estilos para o cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative; /* Para permitir o uso de posicionamento absoluto */
+}
+
+.logo-link {
+  display: block;
+  margin-right: 20px; /* Espaçamento entre logo e texto */
+}
+
+.logo-link img {
+  max-width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+  height: auto;
+  display: block;
+}
+
+.header-title {
+  flex: 1; /* Faz o título ocupar o espaço restante */
+  text-align: center; /* Centraliza o texto no container */
+}
+
+.header h1 {
+  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+  margin: 0; /* Remove a margem padrão */
+  color: #ffffff; /* Cor do texto */
+}
+
+/* Estilos adicionais para a página */
+.container {
+  padding: 20px;
+}
+
+.table {
+  width: 100%;  
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f4f4f4;
+}
+
+/* Estilos para o botão de finalizar */
+button {
+  background-color: #4CAF50; /* Cor verde */
+  color: white; /* Texto branco */
+  border: none; /* Sem borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+  text-decoration: none; /* Sem sublinhado */
+  display: inline-block; /* Exibição em linha */
+  font-size: 16px; /* Tamanho da fonte */
+  margin: 4px 2px; /* Margem */
+  cursor: pointer; /* Cursor de mãozinha */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+button:hover {
+  background-color: #45a049; /* Cor verde mais escura ao passar o mouse */
+}

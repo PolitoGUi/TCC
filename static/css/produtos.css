@@ -1,0 +1,129 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Cor de fundo semelhante ao da imagem */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo do cabeçalho */
+  .header {
+    background-color: #A52A2A; /* Vermelho intenso do cabeçalho */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-link {
+    display: block;
+    margin-left: 20px; /* Espaçamento entre logo e texto */
+  }
+  
+  .logo-link img {
+    max-width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+  }
+  
+  .header-title {
+    flex: 1; /* Faz o título ocupar o espaço restante */
+  }
+  
+  .header h1 {
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    margin: 0; /* Remove a margem padrão */
+    color: #ffffff; /* Cor do texto */
+  }
+  
+  /* Estilo para o contêiner de produtos */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Estilo para os links */
+  .title-links {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens de modo que fiquem nos extremos */
+    margin-bottom: 20px; /* Espaço abaixo dos links */
+  }
+  
+  .link-left, .link-right {
+    flex: 1; /* Garante que ambos os links ocupem a mesma quantidade de espaço */
+  }
+  
+  .link-left {
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  .link-right {
+    text-align: right; /* Alinha o texto à direita */
+  }
+  
+  .title-links h2 {
+    margin: 0;
+    font-weight: bold;
+    background-color: #A52A2A; /* Cor de fundo marrom da seção de pedidos */
+    color: white;
+    padding: 10px;
+  }
+  
+  .title-links h2 a {
+    color: #ffffff; /* Define a cor inicial do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Torna o texto do link negrito */
+  }
+  
+/* Estilo dos cartões de produto */
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cartões */
+    justify-content: center; /* Centraliza os cartões horizontalmente */
+    width: 100%; /* Garante que os cartões ocupem toda a largura disponível */
+    max-width: 1200px; /* Limita a largura máxima dos cartões */
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: #FAFAD2; /* Cor de fundo dos cartões */
+  }
+  
+  .card-header img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-footer {
+    padding: 10px;
+  }
+  
+  .card-footer h2 {
+    margin: 10px 0; /* Espaçamento acima e abaixo do título */
+  }
+  
+  .card-footer p {
+    margin: 5px 0; /* Espaçamento acima e abaixo da quantidade */
+  }
+  
+  /* Estilo do botão */
+  .button {
+    background-color: #F08080; /* Cor do botão semelhante ao rosa salmão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px; /* Espaço acima do botão */
+  }
+  
+  .button:hover {
+    background-color: #DC143C; /* Vermelho escuro ao passar o mouse */
+  }
+  

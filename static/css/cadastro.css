@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+    background-color: #ECEFDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita rolagem horizontal */
+}
+
+.container {
+    background-color: #2272a46e;
+    padding: 20px; /* Reduzido para ajustar o tamanho */
+    border-radius: 8px; /* Menor para ajustar a aparência */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%; /* Ajusta a largura para caber melhor em telas menores */
+    max-width: 400px; /* Limita a largura máxima */
+}
+
+.logo img {
+    width: 80px; /* Reduzido para ajustar ao novo tamanho */
+    margin-bottom: 15px; /* Ajustado para melhor espaçamento */
+}
+
+.login-form h1 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5em; /* Reduzido para ajustar ao novo layout */
+}
+
+.form-group {
+    margin-bottom: 10px; /* Reduzido para ajustar o espaçamento */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px; /* Ajustado para menor espaçamento */
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px; /* Reduzido para ajustar o tamanho do campo */
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Menor para ajustar ao novo layout */
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #0b3a70;
+    color: #fff;
+    padding: 8px 16px; /* Reduzido para ajustar o tamanho do botão */
+    border: none;
+    border-radius: 10px; /* Menor para ajustar o botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #09365c; /* Ajustado para um tom mais escuro ao passar o mouse */
+}
+
+a {
+    color: #0b3a70;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
