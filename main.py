@@ -13,10 +13,10 @@ app.config['SECRET_KEY'] = 'admin'
 
 def get_db_connection():
     conn_str = {
-        'dbname': "tcc_wt2c",
+        'dbname': "tcc_7txm",
         'user': "guilherme",
-        'password': "ArRqQLQVOtJcdPs8DZLVmGWHxZy2ZJR6",
-        'host': "dpg-crb3dsjtq21c73cf85rg-a.oregon-postgres.render.com",
+        'password': "8x7w3NWd4IP477AZfmMfeZCcipKiRIb7",
+        'host': "dpg-csjad1tsvqrc73eq6ht0-a.oregon-postgres.render.com",
         'port': "5432"
     }
     return psycopg2.connect(**conn_str)
