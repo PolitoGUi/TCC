@@ -6,10 +6,10 @@ app = FastAPI()
 
 def get_db_connection():
     return psycopg2.connect(
-        dbname="tcc_7txm",
+        dbname="tcc_mczw",
         user="guilherme",
-        password="8x7w3NWd4IP477AZfmMfeZCcipKiRIb7",
-        host="dpg-csjad1tsvqrc73eq6ht0-a.oregon-postgres.render.com",
+        password="7iqncuFEltMlHHyzPgzgEBxVKL9lVFpk",
+        host="dpg-ct74bel2ng1s73c9sgtg-a.oregon-postgres.render.com",
         port="5432"
     )
 
